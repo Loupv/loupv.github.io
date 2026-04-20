@@ -460,10 +460,23 @@ section:not(#hero) {
 }
 
 .about-text p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: rgba(255,255,255,0.8);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.78);
+  margin-bottom: 1.4rem;
+}
+
+.about-text p.bio-lead {
+  font-size: 1.3rem;
+  line-height: 1.55;
+  color: #fff;
+  font-weight: 500;
   margin-bottom: 2rem;
+}
+
+.about-text em {
+  font-style: italic;
+  color: rgba(255,255,255,0.95);
 }
 
 .affiliations {
