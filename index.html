@@ -59,97 +59,122 @@
     <section id="projects">
         <div class="section-container">
             <h2 class="section-title fade-in">Projects</h2>
+            <div class="filter-bar fade-in" role="tablist" aria-label="Filter projects by category">
+                <button class="filter-pill active" data-filter="all">All</button>
+                <button class="filter-pill" data-filter="xr">XR / VR</button>
+                <button class="filter-pill" data-filter="performance">Performance</button>
+                <button class="filter-pill" data-filter="installation">Installation</button>
+                <button class="filter-pill" data-filter="research">Research</button>
+                <button class="filter-pill" data-filter="music">Music</button>
+            </div>
             <div class="project-grid">
-                <a href="https://www.youtube.com/watch?v=HmEGX0_Dh9U" class="project-card fade-in">
+                <article class="project-card fade-in" data-project="zenbu-koko" data-tags="xr installation" tabindex="0" role="button" aria-label="Open details for Zenbu Koko">
                     <img src="assets/img/zk-siggraph3.jpg" alt="Zenbu Koko" />
+                    <a href="https://www.youtube.com/watch?v=HmEGX0_Dh9U" class="external-link" target="_blank" rel="noopener" aria-label="Open external project page" onclick="event.stopPropagation()"><i class="fas fa-arrow-up-right-from-square"></i></a>
                     <div class="card-overlay">
                         <h3>Zenbu Koko</h3>
                         <p>A XR meditation capsule, in collaboration with Kengo Kuma &amp; Associates</p>
                         <span class="card-year">2024</span>
                     </div>
-                </a>
-                <a href="https://hypnoscope.fr" class="project-card featured fade-in">
+                </article>
+                <article class="project-card featured fade-in" data-project="tisseuse" data-tags="xr performance" tabindex="0" role="button" aria-label="Open details for La Tisseuse d'Histoires">
                     <img src="assets/img/tisseuse-rectovrso.jpg" alt="La Tisseuse d'Histoires" />
+                    <a href="https://hypnoscope.fr" class="external-link" target="_blank" rel="noopener" aria-label="Open external project page" onclick="event.stopPropagation()"><i class="fas fa-arrow-up-right-from-square"></i></a>
                     <div class="card-overlay">
                         <h3>La Tisseuse d'Histoires</h3>
                         <p>A multimodal improvisation performance, mixing VR, storytelling, puppeteering</p>
-                        <span class="card-year">2022</span>
+                        <span class="card-year">2022–2025</span>
                     </div>
-                </a>
-                <a href="https://chords-explorer.me" class="project-card fade-in">
+                </article>
+                <article class="project-card fade-in" data-project="chords" data-tags="music" tabindex="0" role="button" aria-label="Open details for Chords Explorer">
                     <img src="assets/img/chords-explorer.png" alt="Chords Explorer" />
+                    <a href="https://chords-explorer.me" class="external-link" target="_blank" rel="noopener" aria-label="Open external project page" onclick="event.stopPropagation()"><i class="fas fa-arrow-up-right-from-square"></i></a>
                     <div class="card-overlay">
                         <h3>Chords Explorer</h3>
-                        <p>Interactive web app for exploring musical chords across instruments</p>
+                        <p>A cross-platform musical sketchpad for chord progressions</p>
                     </div>
-                </a>
-                <a href="https://spatialmedia.ensadlab.fr/articulations/" class="project-card fade-in">
+                </article>
+                <article class="project-card fade-in" data-project="articulations-median" data-tags="xr performance installation" tabindex="0" role="button" aria-label="Open details for Articulations Median">
                     <img src="assets/img/articulations-median.jpg" alt="Articulations - Median" />
+                    <a href="https://spatialmedia.ensadlab.fr/articulations/" class="external-link" target="_blank" rel="noopener" aria-label="Open external project page" onclick="event.stopPropagation()"><i class="fas fa-arrow-up-right-from-square"></i></a>
                     <div class="card-overlay">
-                        <h3>Articulations - Median</h3>
-                        <p>Shared Diminished Reality installation where two participants control a single avatar</p>
+                        <h3>Articulations — Median</h3>
+                        <p>A live VR dance performance built on the Shared Diminished Reality framework</p>
+                        <span class="card-year">2019</span>
                     </div>
-                </a>
-                <a href="https://spatialmedia.ensadlab.fr/articulations/" class="project-card featured fade-in" style="grid-column: 2 / span 2;">
+                </article>
+                <article class="project-card featured fade-in" data-project="articulations" data-tags="xr research" tabindex="0" role="button" aria-label="Open details for Articulations" style="grid-column: 2 / span 2;">
                     <img src="assets/img/articulations.png" alt="Articulations" />
+                    <a href="https://spatialmedia.ensadlab.fr/articulations/" class="external-link" target="_blank" rel="noopener" aria-label="Open external project page" onclick="event.stopPropagation()"><i class="fas fa-arrow-up-right-from-square"></i></a>
                     <div class="card-overlay">
                         <h3>Articulations</h3>
-                        <p>Multi-user research project about co-creativity in diminished reality</p>
+                        <p>Interdisciplinary VR research on collective creativity in Shared Diminished Reality</p>
+                        <span class="card-year">2019–2021</span>
                     </div>
-                </a>
-                <a href="https://twitter.com/loupvuarnesson/status/1512476494366318593?s=20&t=ELNMoHxU3wuFQBTIudIBuQ" class="project-card fade-in">
+                </article>
+                <article class="project-card fade-in" data-project="shadows" data-tags="xr installation" tabindex="0" role="button" aria-label="Open details for Shadows and Seams">
                     <img src="assets/img/shadows.jpg" alt="Shadows & Seams" />
+                    <a href="https://twitter.com/loupvuarnesson/status/1512476494366318593" class="external-link" target="_blank" rel="noopener" aria-label="Open external project page" onclick="event.stopPropagation()"><i class="fas fa-arrow-up-right-from-square"></i></a>
                     <div class="card-overlay">
                         <h3>Shadows & Seams</h3>
-                        <p>Artistic residency in Museum of Naive Arts @ Laval</p>
+                        <p>Artistic residency at the Museum of Naive Arts in Laval</p>
                         <span class="card-year">RectoVRso 2022</span>
                     </div>
-                </a>
-                <a href="https://spatialmedia.ensadlab.fr/roswell/" class="project-card featured fade-in" style="grid-column: 1 / span 2;">
+                </article>
+                <article class="project-card featured fade-in" data-project="roswell" data-tags="xr installation research" tabindex="0" role="button" aria-label="Open details for Roswell" style="grid-column: 1 / span 2;">
                     <img src="assets/img/roswell1.png" alt="Roswell" />
+                    <a href="https://spatialmedia.ensadlab.fr/roswell/" class="external-link" target="_blank" rel="noopener" aria-label="Open external project page" onclick="event.stopPropagation()"><i class="fas fa-arrow-up-right-from-square"></i></a>
                     <div class="card-overlay">
                         <h3>Roswell : Autopsie d'une controverse</h3>
-                        <p>An immersive VR installation based on photogrammetric reconstruction of spaces from film archives</p>
+                        <p>VR installation reconstructing the Roswell controversy from photogrammetric film archives</p>
+                        <span class="card-year">2018</span>
                     </div>
-                </a>
-                <a href="https://vimeo.com/717443614" class="project-card fade-in">
+                </article>
+                <article class="project-card fade-in" data-project="dancing-shadows" data-tags="xr performance" tabindex="0" role="button" aria-label="Open details for Dancing Shadows">
                     <img src="assets/img/dancingshadows.png" alt="Dancing Shadows" />
+                    <a href="https://vimeo.com/717443614" class="external-link" target="_blank" rel="noopener" aria-label="Open external project page" onclick="event.stopPropagation()"><i class="fas fa-arrow-up-right-from-square"></i></a>
                     <div class="card-overlay">
                         <h3>Dancing Shadows</h3>
-                        <p>An "augmented" shadow theater where a puppeteer and an immersant dialogue using silhouettes</p>
+                        <p>Augmented shadow theater dialogue between a puppeteer and an immersant</p>
+                        <span class="card-year">2022</span>
                     </div>
-                </a>
-                <div class="project-card fade-in">
+                </article>
+                <article class="project-card fade-in" data-project="arena" data-tags="installation" tabindex="0" role="button" aria-label="Open details for Arena by EMOTIC">
                     <img src="assets/img/arena.jpg" alt="Arena by EMOTIC" />
-                    <div class="card-overlay" style="opacity:1;">
+                    <div class="card-overlay">
                         <h3>Arena by EMOTIC</h3>
                         <p>A multisensory immersive room with 180° screen, 7.1 sound, haptic and olfactory feedbacks</p>
                     </div>
-                </div>
-                <a href="http://spatialmedia.ensadlab.fr/projet-pep-perception-espace-partage/" class="project-card fade-in">
+                </article>
+                <article class="project-card fade-in" data-project="pep" data-tags="xr research" tabindex="0" role="button" aria-label="Open details for PEP">
                     <img src="assets/img/pep.jpg" alt="PEP" />
+                    <a href="http://spatialmedia.ensadlab.fr/projet-pep-perception-espace-partage/" class="external-link" target="_blank" rel="noopener" aria-label="Open external project page" onclick="event.stopPropagation()"><i class="fas fa-arrow-up-right-from-square"></i></a>
                     <div class="card-overlay">
                         <h3>PEP : Perception Espaces Partagés</h3>
                         <p>Study on perceptive processes during shared experiences in online digital spaces</p>
                         <span class="card-year">PSL / Collège de France</span>
                     </div>
-                </a>
-                <a href="http://pictofilmo.com/abyss-halle-realite-virtuelle/" class="project-card fade-in">
+                </article>
+                <article class="project-card fade-in" data-project="abysshalle" data-tags="xr installation" tabindex="0" role="button" aria-label="Open details for Abyss'halle">
                     <img src="assets/img/abysshalle.png" alt="Abyss'halle" />
+                    <a href="http://pictofilmo.com/abyss-halle-realite-virtuelle/" class="external-link" target="_blank" rel="noopener" aria-label="Open external project page" onclick="event.stopPropagation()"><i class="fas fa-arrow-up-right-from-square"></i></a>
                     <div class="card-overlay">
                         <h3>Abyss'halle</h3>
-                        <p>Photorealistic 3D reconstitution with a surprising underwater atmosphere</p>
+                        <p>VR demo recreating Picto Filmo's office under a surprising underwater atmosphere</p>
+                        <span class="card-year">2016–2017</span>
                     </div>
-                </a>
-                <a href="https://selenian.bandcamp.com/" class="project-card fade-in">
+                </article>
+                <article class="project-card fade-in" data-project="selenian" data-tags="music" tabindex="0" role="button" aria-label="Open details for Selenian">
                     <img src="assets/img/selenian.jpg" alt="Selenian" />
+                    <a href="https://selenian.bandcamp.com/" class="external-link" target="_blank" rel="noopener" aria-label="Open external project page" onclick="event.stopPropagation()"><i class="fas fa-arrow-up-right-from-square"></i></a>
                     <div class="card-overlay">
                         <h3>Selenian</h3>
                         <p>Indie-pop / dreampop band from Valenciennes — guitar</p>
                         <span class="card-year">2012–2015</span>
                     </div>
-                </a>
+                </article>
             </div>
+            <p class="grid-empty" hidden>No projects in this category.</p>
         </div>
     </section>
 
@@ -308,6 +333,32 @@
         </div>
     </section>
 
+    <!-- Project Modal -->
+    <div id="project-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-overlay" data-close></div>
+        <div class="modal-content">
+            <button class="modal-close" data-close aria-label="Close">&times;</button>
+            <div class="modal-media" id="modal-media"></div>
+            <div class="modal-body">
+                <span class="modal-tags" id="modal-tags"></span>
+                <h2 id="modal-title"></h2>
+                <span class="modal-year" id="modal-year"></span>
+                <p class="modal-description" id="modal-description"></p>
+                <div class="modal-meta-block" id="modal-collaborators-block">
+                    <h4>Collaborators</h4>
+                    <p id="modal-collaborators"></p>
+                </div>
+                <div class="modal-meta-block" id="modal-venues-block">
+                    <h4>Venues &amp; Exhibitions</h4>
+                    <p id="modal-venues"></p>
+                </div>
+                <a id="modal-link" target="_blank" rel="noopener" class="modal-link-btn" hidden>
+                    Visit project <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Loup Vuarnesson</p>
@@ -352,6 +403,229 @@
                     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
+        });
+
+        // ============================================================
+        // Project filter
+        // ============================================================
+        const filterPills = document.querySelectorAll('.filter-pill');
+        const cards = document.querySelectorAll('.project-card');
+        const emptyMsg = document.querySelector('.grid-empty');
+
+        filterPills.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.dataset.filter;
+                filterPills.forEach(p => p.classList.remove('active'));
+                btn.classList.add('active');
+
+                let visibleCount = 0;
+                cards.forEach(card => {
+                    const tags = (card.dataset.tags || '').split(/\s+/);
+                    const match = filter === 'all' || tags.includes(filter);
+                    card.classList.toggle('hidden', !match);
+                    if (match) visibleCount++;
+                });
+                if (emptyMsg) emptyMsg.hidden = visibleCount > 0;
+            });
+        });
+
+        // ============================================================
+        // Project modal
+        // ============================================================
+        const projectData = {
+            'zenbu-koko': {
+                title: 'Zenbu Koko',
+                year: '2024',
+                tags: ['XR', 'Installation', 'Meditation'],
+                image: 'assets/img/zk-siggraph3.jpg',
+                description: "A XR meditation capsule developed at All Here in collaboration with the renowned architectural firm Kengo Kuma & Associates. The platform brings complex contemplative practices to a wider audience through interactive immersive programs that engage the body and the representation of self.",
+                collaborators: 'All Here · Kengo Kuma and Associates',
+                venues: 'Presented at SIGGRAPH 2024',
+                link: 'https://www.youtube.com/watch?v=HmEGX0_Dh9U'
+            },
+            'tisseuse': {
+                title: "La Tisseuse d'Histoires",
+                year: '2022 — ongoing',
+                tags: ['XR', 'Performance', 'Storytelling'],
+                image: 'assets/img/tisseuse-rectovrso.jpg',
+                description: "A live participatory performance fusing theater, virtual filmmaking and collective improvisation. Audience members shape the narrative in real time — choosing story directions, suggesting virtual sets, stepping in as narrators — while a musician improvises a live score, collectively crafting a unique cinematic story each evening.",
+                collaborators: 'Rémi Sagot-Duvauroux & Loup Vuarnesson (conception) · Lia Mchedlishvili (artistic direction) · Matthieu Lecoq, Guilherme de Almeida, Satsuki Hoshino (music) · supported by EnsadLab · funded by Ville de Drancy and Passeurs d\'Images',
+                venues: 'Espace Culturel du Parc, Drancy (2022) · Sorbonne Nouvelle, Paris (2023) · Festival Recto-VRso, Laval (2024) · Maison des Ensembles, Paris (2024) · Biennale Chroniques, Théâtre Massalia, Marseille (2025)',
+                link: 'https://hypnoscope.fr'
+            },
+            'chords': {
+                title: 'Chords Explorer',
+                year: 'Ongoing',
+                tags: ['Music', 'Web', 'Mobile'],
+                image: 'assets/img/chords-explorer.png',
+                description: "A cross-platform musical sketchpad for sparking and refining chord progressions. Pick a chord or roll the dice to seed an idea, then build, edit and audition harmonic sequences before exporting the result to MIDI, WAV or TXT. Available on web, iOS, Android and desktop, in five languages.",
+                collaborators: 'Independent project',
+                venues: 'Web · iOS · Android · macOS · Windows',
+                link: 'https://chords-explorer.me'
+            },
+            'articulations-median': {
+                title: 'Articulations — Median',
+                year: '2019',
+                tags: ['XR', 'Performance', 'Installation'],
+                image: 'assets/img/articulations-median.jpg',
+                description: "A performance-oriented variant of the Articulations VR system, staged as a live dance piece at ENSAD's Salle Rotonde. Built on the Shared Diminished Reality framework, it pairs immersed dancers with a live musician so an audience can witness the emergence of collective gesture, extending the lab's research apparatus into a public, theatrical setting.",
+                collaborators: 'Dancers Clint Lutes, Nassim Baddag, Sofian El Boukhari · Musician Baptiste Morin · EnsadLab / Spatial Media · EUR ArTeC',
+                venues: 'ENSAD, Salle Rotonde, Paris (Nov 2019) · Workshop residencies at Larret, Périgord Blanc (2021)',
+                link: 'https://spatialmedia.ensadlab.fr/articulations/'
+            },
+            'articulations': {
+                title: 'Articulations',
+                year: '2019 — 2021',
+                tags: ['XR', 'Research', 'Co-creativity'],
+                image: 'assets/img/articulations.png',
+                description: "An interdisciplinary VR research project bringing together VR designers, neuroscientists, dancers and anthropologists to study how a collective begins to create together through gestural interaction. Two participants improvise dance freely inside a Shared Diminished Reality (SHIVR) headset setup, while their movement and physiology are captured in real time to observe the emergence of intersubjective creative dynamics.",
+                collaborators: 'Lab. Structures Formelles du Langage (CNRS / Paris 8) · EnsadLab / Spatial Media · UC Davis · funded by EUR ArTeC · L. Vuarnesson, D. Zamplaras, J. Laroche, J. Dumit, C. Lutes, A. Bachrach, F. Garnier',
+                venues: 'Tate Modern, London — "Moving Humans with CREATE" workshop (2019) · Symposium "Virtual Creativity, Collective Realities" — ENSAD & CNRS Pouchet, Paris (2019) · Residencies in Larret, Périgord Blanc (2021)',
+                link: 'https://spatialmedia.ensadlab.fr/articulations/'
+            },
+            'shadows': {
+                title: 'Shadows & Seams',
+                year: '2022',
+                tags: ['XR', 'Installation', 'Residency'],
+                image: 'assets/img/shadows.jpg',
+                description: "An artistic residency at the Museum of Naive Arts in Laval, exploring how diminished and shared realities can dialogue with the museum's collection and architecture. Presented as part of the RectoVRso Festival.",
+                collaborators: 'Museum of Naive Arts, Laval · RectoVRso Festival',
+                venues: 'Museum of Naive Arts, Laval (2022)',
+                link: 'https://twitter.com/loupvuarnesson/status/1512476494366318593'
+            },
+            'roswell': {
+                title: "Roswell : Autopsie d'une controverse",
+                year: '2018',
+                tags: ['XR', 'Installation', 'Research'],
+                image: 'assets/img/roswell1.png',
+                description: "An immersive interactive VR installation that reconstructs spaces through photogrammetry built from film archives. Visitors step inside the famous Roswell controversy as it unfolds across reconstructed environments, navigating fragments of footage to perform their own forensic exploration of the incident.",
+                collaborators: 'Directed by François Garnier with the Spatial Media team (F. Tsaï, D. Zamplaras, M. Tibay, L. Vuarnesson, L. Mercier, S. Kourkoulakou, C. Pornay) · Mikros Images Technicolor · Agence Martienne',
+                venues: 'Recto VRso OFF — Art&VR Gallery, Laval Virtual (2018)',
+                link: 'https://spatialmedia.ensadlab.fr/roswell/'
+            },
+            'dancing-shadows': {
+                title: 'Dancing Shadows',
+                year: '2022',
+                tags: ['XR', 'Performance', 'Shadow Theater'],
+                image: 'assets/img/dancingshadows.png',
+                description: "An augmented shadow theater piece where a puppeteer and an immersant dialogue using only the silhouettes of physical and virtual objects, projected together onto a single shared white screen. The result blurs the boundary between traditional shadow puppetry and virtual scenography.",
+                collaborators: 'Loup Vuarnesson',
+                venues: 'Workshop & performance (2022)',
+                link: 'https://vimeo.com/717443614'
+            },
+            'arena': {
+                title: 'Arena by EMOTIC',
+                year: '',
+                tags: ['Installation', 'Multisensory'],
+                image: 'assets/img/arena.jpg',
+                description: "A multisensory immersive room with a 180° screen, 7.1 sound system, haptic and olfactory feedbacks. Designed and developed by EMOTIC for collective immersive experiences combining all senses.",
+                collaborators: 'EMOTIC',
+                venues: '',
+                link: ''
+            },
+            'pep': {
+                title: 'PEP : Perception Espaces Partagés',
+                year: '2016 — 2017',
+                tags: ['XR', 'Research', 'Cognitive Science'],
+                image: 'assets/img/pep.jpg',
+                description: "A research project investigating the perceptual and cognitive processes at play when users share actions, emotions and information through avatars in shared online spaces. By studying co-presence between two avatars in the same digital environment, the project asks whether the simulated presence of the Other shapes our actions, builds intersubjective relationships and constitutes a new social reality.",
+                collaborators: 'EnsadLab / Programme EN-ER · Lab. de Physiologie de la Perception et de l\'Action, Collège de France · Scientific direction by Alain Berthoz and François Garnier · Aurélie Herbet, Donatien Aubert, Dionysis Zamplaras, Loup Vuarnesson',
+                venues: 'Published in International Journal of Virtual Reality & ACM Digital Library / VRIC (2017)',
+                link: 'http://spatialmedia.ensadlab.fr/projet-pep-perception-espace-partage/'
+            },
+            'abysshalle': {
+                title: "Abyss'halle",
+                year: '2016 — 2017',
+                tags: ['XR', 'Installation', '3D'],
+                image: 'assets/img/abysshalle.png',
+                description: "A virtual reality demo built by the Picto Filmo studio that recreates their Nantes office at the Halles de la Madeleine in 3D, then immerses the visitor in a surprising underwater atmosphere layered over the familiar workspace. Made for Oculus headsets using open-source tools (notably Blender).",
+                collaborators: 'Picto Filmo studio',
+                venues: 'On-site demo at Picto Filmo offices (Nantes & Paris)',
+                link: 'http://pictofilmo.com/abyss-halle-realite-virtuelle/'
+            },
+            'selenian': {
+                title: 'Selenian',
+                year: '2012 — 2015',
+                tags: ['Music', 'Dreampop'],
+                image: 'assets/img/selenian.jpg',
+                description: "A French dreamy-music project blending 1960s psychedelia (echoes of Broadcast and Tame Impala) with ambient textures and 1990s-flavored shoegaze (Slowdive). The result drifts between hazy hypnagogic pop and noisy atmospheres, leaning into texture and mood over conventional song structure. Loup played guitar.",
+                collaborators: 'Based in Valenciennes, France',
+                venues: 'Releases on Bandcamp: Paradoxical Sleep · Eponyme EP · TDC Tape',
+                link: 'https://selenian.bandcamp.com/'
+            }
+        };
+
+        const modal = document.getElementById('project-modal');
+        const modalMedia = document.getElementById('modal-media');
+        const modalTitle = document.getElementById('modal-title');
+        const modalYear = document.getElementById('modal-year');
+        const modalTags = document.getElementById('modal-tags');
+        const modalDesc = document.getElementById('modal-description');
+        const modalCollabBlock = document.getElementById('modal-collaborators-block');
+        const modalCollab = document.getElementById('modal-collaborators');
+        const modalVenuesBlock = document.getElementById('modal-venues-block');
+        const modalVenues = document.getElementById('modal-venues');
+        const modalLink = document.getElementById('modal-link');
+
+        function openModal(id) {
+            const data = projectData[id];
+            if (!data) return;
+            modalMedia.innerHTML = `<img src="${data.image}" alt="${data.title}" />`;
+            modalTitle.textContent = data.title;
+            modalYear.textContent = data.year || '';
+            modalYear.style.display = data.year ? '' : 'none';
+            modalTags.innerHTML = (data.tags || []).map(t => `<span>${t}</span>`).join('');
+            modalDesc.textContent = data.description;
+
+            if (data.collaborators) {
+                modalCollab.textContent = data.collaborators;
+                modalCollabBlock.hidden = false;
+            } else {
+                modalCollabBlock.hidden = true;
+            }
+            if (data.venues) {
+                modalVenues.textContent = data.venues;
+                modalVenuesBlock.hidden = false;
+            } else {
+                modalVenuesBlock.hidden = true;
+            }
+            if (data.link) {
+                modalLink.href = data.link;
+                modalLink.hidden = false;
+            } else {
+                modalLink.hidden = true;
+            }
+
+            modal.classList.add('open');
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+            modal.querySelector('.modal-content').scrollTop = 0;
+        }
+
+        function closeModal() {
+            modal.classList.remove('open');
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        cards.forEach(card => {
+            card.addEventListener('click', (e) => {
+                if (e.target.closest('.external-link')) return;
+                openModal(card.dataset.project);
+            });
+            card.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    openModal(card.dataset.project);
+                }
+            });
+        });
+
+        modal.querySelectorAll('[data-close]').forEach(el => {
+            el.addEventListener('click', closeModal);
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
         });
     </script>
 </body>
