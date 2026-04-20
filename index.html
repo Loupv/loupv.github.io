@@ -94,13 +94,13 @@
                         <p>A cross-platform musical sketchpad for chord progressions</p>
                     </div>
                 </article>
-                <article class="project-card fade-in" data-project="articulations-median" data-tags="xr performance installation" tabindex="0" role="button" aria-label="Open details for Articulations Median">
+                <article class="project-card fade-in" data-project="articulations-median" data-tags="xr research" tabindex="0" role="button" aria-label="Open details for Articulations Median">
                     <img src="assets/img/articulations-median.jpg" alt="Articulations - Median" />
-                    <a href="https://spatialmedia.ensadlab.fr/articulations/" class="external-link" target="_blank" rel="noopener" aria-label="Open external project page" onclick="event.stopPropagation()"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                    <a href="https://imt-mines-ales.hal.science/hal-04954607/" class="external-link" target="_blank" rel="noopener" aria-label="Open external project page" onclick="event.stopPropagation()"><i class="fas fa-arrow-up-right-from-square"></i></a>
                     <div class="card-overlay">
                         <h3>Articulations — Median</h3>
-                        <p>A live VR dance performance built on the Shared Diminished Reality framework</p>
-                        <span class="card-year">2019</span>
+                        <p>A Shared Diminished Reality installation operationalising the YUMI model</p>
+                        <span class="card-year">2025</span>
                     </div>
                 </article>
                 <article class="project-card featured fade-in" data-project="articulations" data-tags="xr research" tabindex="0" role="button" aria-label="Open details for Articulations" style="grid-column: 2 / span 2;">
@@ -336,9 +336,12 @@
     <!-- Project Modal -->
     <div id="project-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <div class="modal-overlay" data-close></div>
+        <button class="modal-nav modal-prev" aria-label="Previous project">&#10094;</button>
+        <button class="modal-nav modal-next" aria-label="Next project">&#10095;</button>
         <div class="modal-content">
             <button class="modal-close" data-close aria-label="Close">&times;</button>
             <div class="modal-media" id="modal-media"></div>
+            <p class="modal-image-caption" id="modal-image-caption" hidden></p>
             <div class="modal-body">
                 <span class="modal-tags" id="modal-tags"></span>
                 <h2 id="modal-title"></h2>
@@ -352,9 +355,7 @@
                     <h4>Venues &amp; Exhibitions</h4>
                     <p id="modal-venues"></p>
                 </div>
-                <a id="modal-link" target="_blank" rel="noopener" class="modal-link-btn" hidden>
-                    Visit project <i class="fas fa-arrow-up-right-from-square"></i>
-                </a>
+                <div class="modal-links" id="modal-links"></div>
             </div>
         </div>
     </div>
@@ -440,8 +441,11 @@
                 image: 'assets/img/zk-siggraph3.jpg',
                 description: "A XR meditation capsule developed at All Here in collaboration with the renowned architectural firm Kengo Kuma & Associates. The platform brings complex contemplative practices to a wider audience through interactive immersive programs that engage the body and the representation of self.",
                 collaborators: 'All Here · Kengo Kuma and Associates',
-                venues: 'Presented at SIGGRAPH 2024',
-                link: 'https://www.youtube.com/watch?v=HmEGX0_Dh9U'
+                venues: 'Presented at SIGGRAPH Tokyo',
+                links: [
+                    { label: 'Learn more', url: 'https://www.youtube.com/watch?v=HmEGX0_Dh9U' },
+                    { label: 'All Here', url: 'https://allhere.org/' }
+                ]
             },
             'tisseuse': {
                 title: "La Tisseuse d'Histoires",
@@ -461,26 +465,31 @@
                 description: "A cross-platform musical sketchpad for sparking and refining chord progressions. Pick a chord or roll the dice to seed an idea, then build, edit and audition harmonic sequences before exporting the result to MIDI, WAV or TXT. Available on web, iOS, Android and desktop, in five languages.",
                 collaborators: 'Independent project',
                 venues: 'Web · iOS · Android · macOS · Windows',
-                link: 'https://chords-explorer.me'
+                links: [
+                    { label: 'Web app', url: 'https://chords-explorer.me' },
+                    { label: 'App Store', url: 'https://apps.apple.com/app/chords-explorer/id6761266228' },
+                    { label: 'Google Play', url: 'https://play.google.com/store/apps/details?id=me.chordsexplorer.app' }
+                ]
             },
             'articulations-median': {
                 title: 'Articulations — Median',
-                year: '2019',
-                tags: ['XR', 'Performance', 'Installation'],
+                year: '2025',
+                tags: ['XR', 'Research', 'Shared Diminished Reality'],
                 image: 'assets/img/articulations-median.jpg',
-                description: "A performance-oriented variant of the Articulations VR system, staged as a live dance piece at ENSAD's Salle Rotonde. Built on the Shared Diminished Reality framework, it pairs immersed dancers with a live musician so an audience can witness the emergence of collective gesture, extending the lab's research apparatus into a public, theatrical setting.",
-                collaborators: 'Dancers Clint Lutes, Nassim Baddag, Sofian El Boukhari · Musician Baptiste Morin · EnsadLab / Spatial Media · EUR ArTeC',
-                venues: 'ENSAD, Salle Rotonde, Paris (Nov 2019) · Workshop residencies at Larret, Périgord Blanc (2021)',
-                link: 'https://spatialmedia.ensadlab.fr/articulations/'
+                description: "An installation that operationalises the YUMI model of collaborative creativity in Shared Diminished Reality. Two participants share a single avatar composed of three spheres, whose movement emerges from the combined motion of both participants' heads and hands. Worn through VR headsets during unscripted movement improvisations, the setup deliberately blurs the boundary between self and other agency — and the resulting confusion correlates with an extended sense of self, opening new ground for VR research on \"we-mode\" creativity.",
+                collaborators: 'Loup Vuarnesson · Julien Laroche · Asaf Bachrach',
+                venues: 'Published as "Collaborative Creativity in Shared Diminished Reality" — HAL preprint (2025)',
+                link: 'https://imt-mines-ales.hal.science/hal-04954607/'
             },
             'articulations': {
                 title: 'Articulations',
                 year: '2019 — 2021',
                 tags: ['XR', 'Research', 'Co-creativity'],
                 image: 'assets/img/articulations.png',
-                description: "An interdisciplinary VR research project bringing together VR designers, neuroscientists, dancers and anthropologists to study how a collective begins to create together through gestural interaction. Two participants improvise dance freely inside a Shared Diminished Reality (SHIVR) headset setup, while their movement and physiology are captured in real time to observe the emergence of intersubjective creative dynamics.",
-                collaborators: 'Lab. Structures Formelles du Langage (CNRS / Paris 8) · EnsadLab / Spatial Media · UC Davis · funded by EUR ArTeC · L. Vuarnesson, D. Zamplaras, J. Laroche, J. Dumit, C. Lutes, A. Bachrach, F. Garnier',
-                venues: 'Tate Modern, London — "Moving Humans with CREATE" workshop (2019) · Symposium "Virtual Creativity, Collective Realities" — ENSAD & CNRS Pouchet, Paris (2019) · Residencies in Larret, Périgord Blanc (2021)',
+                imageCaption: 'Photo from the Articulations performance with dancers Clint Lutes, Nassim Baddag and Sofian El Boukhari.',
+                description: "An interdisciplinary VR research project bringing together VR designers, neuroscientists, dancers and anthropologists to study how a collective begins to create together through gestural interaction. Two participants improvise dance freely inside a Shared Diminished Reality (SHIVR) headset setup, while their movement and physiology are captured in real time to observe the emergence of intersubjective creative dynamics. The project also developed a public performance staged at ENSAD's Salle Rotonde, pairing immersed dancers with a live musician.",
+                collaborators: 'Lab. Structures Formelles du Langage (CNRS / Paris 8) · EnsadLab / Spatial Media · UC Davis · funded by EUR ArTeC · L. Vuarnesson, R. Sagot-Duvauroux, D. Zamplaras, J. Laroche, J. Dumit, C. Lutes, A. Bachrach, F. Garnier · Performance dancers: Clint Lutes, Nassim Baddag, Sofian El Boukhari · Musician: Baptiste Morin',
+                venues: 'Tate Modern, London — "Moving Humans with CREATE" workshop (2019) · Symposium "Virtual Creativity, Collective Realities" — ENSAD & CNRS Pouchet, Paris (2019) · Performance at ENSAD, Salle Rotonde, Paris (Nov 2019) · Residencies at Larret, Périgord Blanc (2021)',
                 link: 'https://spatialmedia.ensadlab.fr/articulations/'
             },
             'shadows': {
@@ -557,6 +566,7 @@
 
         const modal = document.getElementById('project-modal');
         const modalMedia = document.getElementById('modal-media');
+        const modalCaption = document.getElementById('modal-image-caption');
         const modalTitle = document.getElementById('modal-title');
         const modalYear = document.getElementById('modal-year');
         const modalTags = document.getElementById('modal-tags');
@@ -565,12 +575,31 @@
         const modalCollab = document.getElementById('modal-collaborators');
         const modalVenuesBlock = document.getElementById('modal-venues-block');
         const modalVenues = document.getElementById('modal-venues');
-        const modalLink = document.getElementById('modal-link');
+        const modalLinks = document.getElementById('modal-links');
+        const modalPrev = modal.querySelector('.modal-prev');
+        const modalNext = modal.querySelector('.modal-next');
+
+        let currentProjectId = null;
+
+        function visibleCardIds() {
+            return Array.from(document.querySelectorAll('.project-card:not(.hidden)'))
+                .map(c => c.dataset.project);
+        }
 
         function openModal(id) {
             const data = projectData[id];
             if (!data) return;
+            currentProjectId = id;
+
             modalMedia.innerHTML = `<img src="${data.image}" alt="${data.title}" />`;
+
+            if (data.imageCaption) {
+                modalCaption.textContent = data.imageCaption;
+                modalCaption.hidden = false;
+            } else {
+                modalCaption.hidden = true;
+            }
+
             modalTitle.textContent = data.title;
             modalYear.textContent = data.year || '';
             modalYear.style.display = data.year ? '' : 'none';
@@ -589,12 +618,21 @@
             } else {
                 modalVenuesBlock.hidden = true;
             }
-            if (data.link) {
-                modalLink.href = data.link;
-                modalLink.hidden = false;
-            } else {
-                modalLink.hidden = true;
-            }
+
+            // Build links: support either `links: [{label, url}]` or single `link`
+            const linksArr = data.links
+                ? data.links
+                : (data.link ? [{ label: 'Visit project', url: data.link }] : []);
+            modalLinks.innerHTML = linksArr.map((l, i) => {
+                const cls = i === 0 ? 'modal-link-btn' : 'modal-link-btn modal-link-btn-secondary';
+                return `<a href="${l.url}" target="_blank" rel="noopener" class="${cls}">${l.label} <i class="fas fa-arrow-up-right-from-square"></i></a>`;
+            }).join('');
+
+            // Update prev/next button state
+            const ids = visibleCardIds();
+            const idx = ids.indexOf(id);
+            modalPrev.style.visibility = ids.length > 1 ? 'visible' : 'hidden';
+            modalNext.style.visibility = ids.length > 1 ? 'visible' : 'hidden';
 
             modal.classList.add('open');
             modal.setAttribute('aria-hidden', 'false');
@@ -606,6 +644,17 @@
             modal.classList.remove('open');
             modal.setAttribute('aria-hidden', 'true');
             document.body.style.overflow = '';
+            currentProjectId = null;
+        }
+
+        function navigate(direction) {
+            if (!currentProjectId) return;
+            const ids = visibleCardIds();
+            if (ids.length < 2) return;
+            const idx = ids.indexOf(currentProjectId);
+            if (idx === -1) return;
+            const nextIdx = (idx + direction + ids.length) % ids.length;
+            openModal(ids[nextIdx]);
         }
 
         cards.forEach(card => {
@@ -624,8 +673,14 @@
         modal.querySelectorAll('[data-close]').forEach(el => {
             el.addEventListener('click', closeModal);
         });
+        modalPrev.addEventListener('click', () => navigate(-1));
+        modalNext.addEventListener('click', () => navigate(1));
+
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+            if (!modal.classList.contains('open')) return;
+            if (e.key === 'Escape') closeModal();
+            else if (e.key === 'ArrowLeft') { e.preventDefault(); navigate(-1); }
+            else if (e.key === 'ArrowRight') { e.preventDefault(); navigate(1); }
         });
     </script>
 </body>
