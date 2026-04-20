@@ -38,7 +38,13 @@
 
     <!-- Hero -->
     <section id="hero">
-        <div class="hero-bg" style="background-image: url('assets/img/tisseuse-hero.jpg')"></div>
+        <div class="hero-slideshow">
+            <div class="hero-bg active" style="background-image: url('assets/img/tisseuse-hero.jpg')"></div>
+            <div class="hero-bg" style="background-image: url('assets/img/tisseuse-rectovrso.jpg')"></div>
+            <div class="hero-bg" style="background-image: url('assets/img/articulations.png')"></div>
+            <div class="hero-bg" style="background-image: url('assets/img/zk-siggraph3.jpg')"></div>
+            <div class="hero-bg" style="background-image: url('assets/img/roswell1.png')"></div>
+        </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1>Loup Vuarnesson</h1>
@@ -366,6 +372,20 @@
     </footer>
 
     <script>
+        // ============================================================
+        // Hero slideshow — cross-fade between background images
+        // ============================================================
+        (function () {
+            const slides = document.querySelectorAll('.hero-bg');
+            if (slides.length < 2) return;
+            let i = 0;
+            setInterval(() => {
+                slides[i].classList.remove('active');
+                i = (i + 1) % slides.length;
+                slides[i].classList.add('active');
+            }, 6000);
+        })();
+
         // Nav scroll effect
         const nav = document.getElementById('topNav');
         window.addEventListener('scroll', () => {
@@ -452,6 +472,12 @@
                 year: '2022 — ongoing',
                 tags: ['XR', 'Performance', 'Storytelling'],
                 image: 'assets/img/tisseuse-rectovrso.jpg',
+                images: [
+                    'assets/img/tisseuse-rectovrso.jpg',
+                    'assets/img/gallery/tisseuse/1.jpg',
+                    'assets/img/gallery/tisseuse/2.jpg',
+                    'assets/img/gallery/tisseuse/3.jpg'
+                ],
                 description: "A live participatory performance fusing theater, virtual filmmaking and collective improvisation. Audience members shape the narrative in real time — choosing story directions, suggesting virtual sets, stepping in as narrators — while a musician improvises a live score, collectively crafting a unique cinematic story each evening.",
                 collaborators: 'Rémi Sagot-Duvauroux & Loup Vuarnesson (conception) · Lia Mchedlishvili (artistic direction) · Matthieu Lecoq, Guilherme de Almeida, Satsuki Hoshino (music) · supported by EnsadLab · funded by Ville de Drancy and Passeurs d\'Images',
                 venues: 'Espace Culturel du Parc, Drancy (2022) · Sorbonne Nouvelle, Paris (2023) · Festival Recto-VRso, Laval (2024) · Maison des Ensembles, Paris (2024) · Biennale Chroniques, Théâtre Massalia, Marseille (2025)',
@@ -486,6 +512,12 @@
                 year: '2019 — 2021',
                 tags: ['XR', 'Research', 'Co-creativity'],
                 image: 'assets/img/articulations.png',
+                images: [
+                    'assets/img/articulations.png',
+                    'assets/img/gallery/articulations/1.jpg',
+                    'assets/img/gallery/articulations/2.jpg',
+                    'assets/img/gallery/articulations/3.png'
+                ],
                 imageCaption: 'Photo from the Articulations performance with dancers Clint Lutes, Nassim Baddag and Sofian El Boukhari.',
                 description: "An interdisciplinary VR research project bringing together VR designers, neuroscientists, dancers and anthropologists to study how a collective begins to create together through gestural interaction. Two participants improvise dance freely inside a Shared Diminished Reality (SHIVR) headset setup, while their movement and physiology are captured in real time to observe the emergence of intersubjective creative dynamics. The project also developed a public performance staged at ENSAD's Salle Rotonde, pairing immersed dancers with a live musician.",
                 collaborators: 'Lab. Structures Formelles du Langage (CNRS / Paris 8) · EnsadLab / Spatial Media · UC Davis · funded by EUR ArTeC · L. Vuarnesson, R. Sagot-Duvauroux, D. Zamplaras, J. Laroche, J. Dumit, C. Lutes, A. Bachrach, F. Garnier · Performance dancers: Clint Lutes, Nassim Baddag, Sofian El Boukhari · Musician: Baptiste Morin',
@@ -507,6 +539,10 @@
                 year: '2018',
                 tags: ['XR', 'Installation', 'Research'],
                 image: 'assets/img/roswell1.png',
+                images: [
+                    'assets/img/roswell1.png',
+                    'assets/img/gallery/roswell/1.jpg'
+                ],
                 description: "An immersive interactive VR installation that reconstructs spaces through photogrammetry built from film archives. Visitors step inside the famous Roswell controversy as it unfolds across reconstructed environments, navigating fragments of footage to perform their own forensic exploration of the incident.",
                 collaborators: 'Directed by François Garnier with the Spatial Media team (F. Tsaï, D. Zamplaras, M. Tibay, L. Vuarnesson, L. Mercier, S. Kourkoulakou, C. Pornay) · Mikros Images Technicolor · Agence Martienne',
                 venues: 'Recto VRso OFF — Art&VR Gallery, Laval Virtual (2018)',
@@ -518,7 +554,7 @@
                 tags: ['XR', 'Performance', 'Shadow Theater'],
                 image: 'assets/img/dancingshadows.png',
                 description: "An augmented shadow theater piece where a puppeteer and an immersant dialogue using only the silhouettes of physical and virtual objects, projected together onto a single shared white screen. The result blurs the boundary between traditional shadow puppetry and virtual scenography.",
-                collaborators: 'Loup Vuarnesson',
+                collaborators: 'Loup Vuarnesson · Jennifer Caillaud · Axel Belin',
                 venues: 'Workshop & performance (2022)',
                 link: 'https://vimeo.com/717443614'
             },
@@ -537,6 +573,11 @@
                 year: '2016 — 2017',
                 tags: ['XR', 'Research', 'Cognitive Science'],
                 image: 'assets/img/pep.jpg',
+                images: [
+                    'assets/img/pep.jpg',
+                    'assets/img/gallery/pep/1.jpg',
+                    'assets/img/gallery/pep/2.jpg'
+                ],
                 description: "A research project investigating the perceptual and cognitive processes at play when users share actions, emotions and information through avatars in shared online spaces. By studying co-presence between two avatars in the same digital environment, the project asks whether the simulated presence of the Other shapes our actions, builds intersubjective relationships and constitutes a new social reality.",
                 collaborators: 'EnsadLab / Programme EN-ER · Lab. de Physiologie de la Perception et de l\'Action, Collège de France · Scientific direction by Alain Berthoz and François Garnier · Aurélie Herbet, Donatien Aubert, Dionysis Zamplaras, Loup Vuarnesson',
                 venues: 'Published in International Journal of Virtual Reality & ACM Digital Library / VRIC (2017)',
@@ -557,6 +598,12 @@
                 year: '2012 — 2015',
                 tags: ['Music', 'Dreampop'],
                 image: 'assets/img/selenian.jpg',
+                images: [
+                    'assets/img/selenian.jpg',
+                    'assets/img/gallery/selenian/1.jpg',
+                    'assets/img/gallery/selenian/2.jpg',
+                    'assets/img/gallery/selenian/3.jpg'
+                ],
                 description: "A French dreamy-music project blending 1960s psychedelia (echoes of Broadcast and Tame Impala) with ambient textures and 1990s-flavored shoegaze (Slowdive). The result drifts between hazy hypnagogic pop and noisy atmospheres, leaning into texture and mood over conventional song structure. Loup played guitar.",
                 collaborators: 'Based in Valenciennes, France',
                 venues: 'Releases on Bandcamp: Paradoxical Sleep · Eponyme EP · TDC Tape',
@@ -586,12 +633,60 @@
                 .map(c => c.dataset.project);
         }
 
+        let galleryImages = [];
+        let galleryIndex = 0;
+
+        function renderGallery() {
+            if (galleryImages.length === 0) {
+                modalMedia.innerHTML = '';
+                return;
+            }
+            const src = galleryImages[galleryIndex];
+            const navHtml = galleryImages.length > 1 ? `
+                <button class="gallery-nav gallery-prev" aria-label="Previous image">&#10094;</button>
+                <button class="gallery-nav gallery-next" aria-label="Next image">&#10095;</button>
+                <div class="gallery-dots">
+                    ${galleryImages.map((_, i) => `<span class="gallery-dot${i === galleryIndex ? ' active' : ''}" data-idx="${i}"></span>`).join('')}
+                </div>
+            ` : '';
+            modalMedia.innerHTML = `<img src="${src}" alt="" />${navHtml}`;
+
+            if (galleryImages.length > 1) {
+                modalMedia.querySelector('.gallery-prev').addEventListener('click', (e) => { e.stopPropagation(); galleryStep(-1); });
+                modalMedia.querySelector('.gallery-next').addEventListener('click', (e) => { e.stopPropagation(); galleryStep(1); });
+                modalMedia.querySelectorAll('.gallery-dot').forEach(d => {
+                    d.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        galleryIndex = parseInt(d.dataset.idx, 10);
+                        renderGallery();
+                    });
+                });
+            }
+        }
+
+        function galleryStep(direction) {
+            if (galleryImages.length < 2) return;
+            galleryIndex = (galleryIndex + direction + galleryImages.length) % galleryImages.length;
+            renderGallery();
+        }
+
+        function ga(eventName, params) {
+            if (typeof gtag === 'function') {
+                try { gtag('event', eventName, params || {}); } catch (e) { /* noop */ }
+            }
+        }
+
         function openModal(id) {
             const data = projectData[id];
             if (!data) return;
             currentProjectId = id;
 
-            modalMedia.innerHTML = `<img src="${data.image}" alt="${data.title}" />`;
+            // Build gallery: images array > image fallback
+            galleryImages = data.images && data.images.length ? data.images.slice() : (data.image ? [data.image] : []);
+            galleryIndex = 0;
+            renderGallery();
+
+            ga('project_modal_open', { project_id: id, project_title: data.title });
 
             if (data.imageCaption) {
                 modalCaption.textContent = data.imageCaption;
@@ -625,8 +720,13 @@
                 : (data.link ? [{ label: 'Visit project', url: data.link }] : []);
             modalLinks.innerHTML = linksArr.map((l, i) => {
                 const cls = i === 0 ? 'modal-link-btn' : 'modal-link-btn modal-link-btn-secondary';
-                return `<a href="${l.url}" target="_blank" rel="noopener" class="${cls}">${l.label} <i class="fas fa-arrow-up-right-from-square"></i></a>`;
+                return `<a href="${l.url}" target="_blank" rel="noopener" class="${cls}" data-link-label="${l.label}">${l.label} <i class="fas fa-arrow-up-right-from-square"></i></a>`;
             }).join('');
+            modalLinks.querySelectorAll('a').forEach(a => {
+                a.addEventListener('click', () => {
+                    ga('project_external_click', { project_id: id, link_label: a.dataset.linkLabel, link_url: a.href });
+                });
+            });
 
             // Update prev/next button state
             const ids = visibleCardIds();
@@ -668,6 +768,12 @@
                     openModal(card.dataset.project);
                 }
             });
+            const ext = card.querySelector('.external-link');
+            if (ext) {
+                ext.addEventListener('click', () => {
+                    ga('project_external_click', { project_id: card.dataset.project, link_label: 'card_icon', link_url: ext.href });
+                });
+            }
         });
 
         modal.querySelectorAll('[data-close]').forEach(el => {
