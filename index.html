@@ -567,6 +567,7 @@
                 year: 'Ongoing',
                 tags: ['Music', 'Web', 'Mobile'],
                 image: 'assets/img/chords-explorer.png',
+                video: 'https://www.youtube.com/embed/NIiAQLWAvHs',
                 description: "A cross-platform musical sketchpad for sparking and refining chord progressions. Pick a chord or roll the dice to seed an idea, then build, edit and audition harmonic sequences before exporting the result to MIDI, WAV or TXT. Available on web, iOS, Android and desktop, in five languages.",
                 collaborators: 'Independent project',
                 venues: 'Web · iOS · Android · macOS · Windows',
@@ -760,19 +761,24 @@
             if (!data) return;
             currentProjectId = id;
 
-            // Build gallery: images array > image fallback
-            galleryImages = data.images && data.images.length ? data.images.slice() : (data.image ? [data.image] : []);
-            galleryIndex = 0;
-            renderGallery();
+            // Build media: video takes priority over gallery
+            if (data.video) {
+                galleryImages = [];
+                modalMedia.innerHTML = `<iframe src="${data.video}?rel=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+                modalCaption.hidden = true;
+            } else {
+                galleryImages = data.images && data.images.length ? data.images.slice() : (data.image ? [data.image] : []);
+                galleryIndex = 0;
+                renderGallery();
+                if (data.imageCaption) {
+                    modalCaption.textContent = data.imageCaption;
+                    modalCaption.hidden = false;
+                } else {
+                    modalCaption.hidden = true;
+                }
+            }
 
             ga('project_modal_open', { project_id: id, project_title: data.title });
-
-            if (data.imageCaption) {
-                modalCaption.textContent = data.imageCaption;
-                modalCaption.hidden = false;
-            } else {
-                modalCaption.hidden = true;
-            }
 
             modalTitle.textContent = data.title;
             modalYear.textContent = data.year || '';
@@ -824,6 +830,7 @@
             modal.setAttribute('aria-hidden', 'true');
             document.body.style.overflow = '';
             currentProjectId = null;
+            modalMedia.innerHTML = ''; // stop video playback
         }
 
         function navigate(direction) {
